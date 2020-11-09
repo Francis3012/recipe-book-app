@@ -1,0 +1,29 @@
+@import "variables";
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 4em;
+  &-brand {
+    order: 0;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    height: 4em;
+    margin: auto;
+  }
+  &-links {
+    order: 1;
+    flex-grow: 2;
+    align-self: start;
+    margin: auto 0;
+  }
+  &-form {
+    order: 2;
+  }
+  &-user {
+    order: 3;
+  }
+}
