@@ -1,52 +1,71 @@
-<mat-toolbar class="navbar" color="primary">
-  <h1 class="navbar-brand">Recipe Book</h1>
-  <nav class="navbar-links" mat-tab-nav-bar [backgroundColor]="background">
-    <a
-      mat-tab-link
-      *ngFor="let item of routerLinks"
-      (click)="activeLink = item.label"
-      [routerLink]="item.link"
-      routerLinkActive
-      #rla="routerLinkActive"
-      [active]="rla.isActive"
+<mat-toolbar fxLayout="column" color="primary">
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+    <span flex-item fxFlex>Recipe Book</span>
+
+    <nav
+      flex-item
+      fxFlexAlign="center"
+      mat-tab-nav-bar
+      [backgroundColor]="background"
+      fxHide.lt-md="true"
     >
-      {{ item.label }}
-    </a>
-  </nav>
-  <form class="navbar-form">
-    <mat-form-field class="navbar-full-width" appearance="fill">
-      <mat-label>Search</mat-label>
-      <input
-        matInput
-        placeholder="pat@example.com"
-        [formControl]="search"
-        required
-      />
-      <mat-error *ngIf="search.invalid">{{ getErrorMessage() }}</mat-error>
-    </mat-form-field>
-    <button mat-mini-fab color="accent" class="navbar-form-button">
-      <mat-icon aria-hidden="false" aria-label="home icon"
-        >find_replace</mat-icon
+      <a
+        mat-tab-link
+        *ngFor="let item of routerLinks"
+        (click)="activeLink = item.label"
+        [routerLink]="item.link"
+        routerLinkActive
+        #rla="routerLinkActive"
+        [active]="rla.isActive"
       >
-    </button>
-  </form>
-  <button class="navbar-user" mat-button [matMenuTriggerFor]="beforeMenu">
-    <mat-icon aria-hidden="false" aria-label="Example home icon"
-      >account_circle</mat-icon
-    ><mat-icon aria-hidden="false" aria-label="Example home icon"
-      >expand_more</mat-icon
+        {{ item.label }}
+      </a>
+    </nav>
+
+    <button
+      flex-item
+      fxFlex="5"
+      mat-button
+      [matMenuTriggerFor]="beforeMenu"
+      aria-label="User Menu"
     >
-  </button>
-  <mat-menu #beforeMenu="matMenu" xPosition="before">
-    <button mat-menu-item>
-      <mat-icon aria-hidden="false" aria-label="Example home icon"
-        >cached</mat-icon
-      >Get Recipes
+      <mat-icon>account_circle</mat-icon><mat-icon>expand_more</mat-icon>
     </button>
-    <button mat-menu-item>
-      <mat-icon aria-hidden="false" aria-label="Example home icon"
-        >save_alt</mat-icon
-      >Save Recipes
-    </button>
-  </mat-menu>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>
+        <mat-icon aria-hidden="false" aria-label="Get Recipes">cached</mat-icon
+        >Get Recipes
+      </button>
+      <button mat-menu-item>
+        <mat-icon aria-hidden="false" aria-label="Save Recipes"
+          >save_alt</mat-icon
+        >Save Recipes
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+  <mat-toolbar-row
+    fxLayout="row"
+    fxLayoutAlign="flex-end center"
+    fxHide.gt-sm="true"
+  >
+    <nav
+      flex-item
+      fxFlexAlign="center"
+      mat-tab-nav-bar
+      [backgroundColor]="background"
+      fxShow.st-md="true"
+    >
+      <a
+        mat-tab-link
+        *ngFor="let item of routerLinks"
+        (click)="activeLink = item.label"
+        [routerLink]="item.link"
+        routerLinkActive
+        #rla="routerLinkActive"
+        [active]="rla.isActive"
+      >
+        {{ item.label }}
+      </a>
+    </nav></mat-toolbar-row
+  >
 </mat-toolbar>
