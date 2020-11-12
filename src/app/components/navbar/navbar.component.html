@@ -1,7 +1,7 @@
 <mat-toolbar fxLayout="column" color="primary">
   <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
-    <span flex-item fxFlex>Recipe Book</span>
-
+    <h1 routerLink="/">Recipe Book</h1>
+    <span fxFlex></span>
     <nav
       flex-item
       fxFlexAlign="center"
@@ -21,10 +21,10 @@
         {{ item.label }}
       </a>
     </nav>
-
+    <span fxFlex></span>
     <button
       flex-item
-      fxFlex="5"
+      fxFlex="3"
       mat-button
       [matMenuTriggerFor]="beforeMenu"
       aria-label="User Menu"
@@ -45,7 +45,7 @@
   </mat-toolbar-row>
   <mat-toolbar-row
     fxLayout="row"
-    fxLayoutAlign="flex-end center"
+    fxLayoutAlign="center center"
     fxHide.gt-sm="true"
   >
     <nav

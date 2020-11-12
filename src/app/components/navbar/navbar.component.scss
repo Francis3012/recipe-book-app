@@ -1,0 +1,6 @@
+h1 {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
