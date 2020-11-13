@@ -9,21 +9,25 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatOptionModule } from '@angular/material/core';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 
 const material = [
-  MatToolbarModule,
-  MatButtonModule,
-  MatIconModule,
-  MatAutocompleteModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatOptionModule,
-  MatTabsModule,
-  MatMenuModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule,
+    MatTabsModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatCardModule,
 ];
 
 @NgModule({
-  imports: [material],
-  exports: [material],
+    imports: [material],
+    exports: [material],
 })
 export class MaterialModule {}
