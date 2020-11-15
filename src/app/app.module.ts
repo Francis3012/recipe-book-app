@@ -12,17 +12,17 @@ import { RecipeModule } from './shared/recipe.module';
 import { ShoppingModule } from './shared/shopping.module';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, FooterComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    RecipeModule,
-    ShoppingModule,
-    SharedModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, NavbarComponent, FooterComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        RecipeModule,
+        ShoppingModule,
+        SharedModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

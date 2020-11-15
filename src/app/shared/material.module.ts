@@ -11,6 +11,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatOptionModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 const material = [
     MatToolbarModule,
@@ -24,6 +26,8 @@ const material = [
     MatMenuModule,
     MatDividerModule,
     MatCardModule,
+    MatListModule,
+    MatGridListModule,
 ];
 
 @NgModule({
